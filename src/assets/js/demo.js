@@ -187,8 +187,11 @@ demo = {
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
 
         Chartist.Pie('#chartPreferences', {
-            labels: ['53%', '36%', '11%'],
-            series: [53, 36, 11]
+            labels: [parseFloat((100 / 159) * 100).toFixed(0) + '%',
+                parseFloat((20 / 159) * 100).toFixed(0) + '%',
+                parseFloat((39 / 159) * 100).toFixed(0) + '%'
+            ],
+            series: [100, 20, 39]
         });
 
 
