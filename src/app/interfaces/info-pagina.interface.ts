@@ -1,4 +1,5 @@
 export interface infoPag {
+
     titulo?: string;
     email?: string;
     facebook?: string;

@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table table-hover table-bordered table-dark">
+    <thead>
+      <th scope="id">id</th>
+      <th scope="nombre">Nombre</th>
+      <th scope="precio">Precio</th>
+      <th scope="cantidad">Cantidad</th>
+      <!-- <th scope="json">Json</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of (ProdService.allProducts|async)">
+        <td>{{ producto.id}}</td>
+        <td>{{ producto.nombre }} </td>
+        <td>{{ producto.precio }} </td>
+        <td>{{ producto.cantidad }}</td>
+        <!-- <td> {{producto | json}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

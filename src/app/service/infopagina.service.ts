@@ -13,7 +13,6 @@ export class InfopaginaService {
     this.http.get('assets/data/data-pagina.json').subscribe((resp: infoPag) => {
       this.cargada = true;
       this.info = resp;
-      // console.log(this.info.notificacion);
     }
     );
   }

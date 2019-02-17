@@ -10,6 +10,18 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserComponent } from './pages/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 
+// firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { environment } from '../environments/environment';
+import { ProductoComponent } from './pages/producto/producto.component';
+import { ProductoService } from './service/producto.service';
+
+// formulario
+import { FormsModule } from '@angular/forms';
+import { LproductosComponent } from './pages/lproductos/lproductos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +29,19 @@ import { HttpClientModule } from '@angular/common/http';
     MenuLeftComponent,
     FooterComponent,
     DashboardComponent,
-    UserComponent
+    UserComponent,
+    ProductoComponent,
+    LproductosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

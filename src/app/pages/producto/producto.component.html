@@ -1,0 +1,26 @@
+
+<div class="card">
+ <form>
+    <div class="form-group">
+      <p>Nombre</p>
+      <input type="text" class="form-control" name="nombre" #name="ngModel"
+        [(ngModel)]="ProdService.productTemp.nombre" placeholder="Nombre Producto" id="input1" required />
+    </div>
+    <div class="form-group">
+      <p>precio</p>
+      <input type="number" class="form-control" name="precio" #name="ngModel"
+        [(ngModel)]="ProdService.productTemp.precio" placeholder="precio Producto" id="input1" required />
+    </div>
+    <div class="form-group">
+      <p>cantidad</p>
+      <input type="number" class="form-control" name="cantidad" #name="ngModel"
+        [(ngModel)]="ProdService.productTemp.cantidad" placeholder="cantidad Producto" id="input1" required />
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-success btn-lg btn-block" (click)="onSubmit()">Guardar</button>
+    </div>
+    <div class="form-group">
+      <button type="reset" class="btn btn-cancel btn-lg btn-block" (click)="reset()">Cancelar</button>
+    </div>
+  </form>
+</div>
